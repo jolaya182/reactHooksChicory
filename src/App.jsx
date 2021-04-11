@@ -2,7 +2,7 @@
 /**
  * title: App.js
  *
- * date: / /
+ * date: 4/10/2021
  *
  * author: javier olaya
  *
@@ -14,13 +14,13 @@ import PropTypes from 'prop-types';
 import { Route, Switch, HashRouter as Router } from 'react-router-dom';
 import pages from './frontEnd/css/index.scss';
 import ErrorBoundary from './frontEnd/components/UtilComponents/ErrorBoundary';
-import { Whoops404, myUtilComponent } from './frontEnd/page';
+import { Whoops404, chicoryDropDown } from './frontEnd/page';
 
 const App = () => (
   <ErrorBoundary>
     <Router>
       <Switch>
-        <Route path="/" exact component={myUtilComponent} />
+        <Route path="/" exact component={chicoryDropDown} />
         <Route component={Whoops404} />
       </Switch>
     </Router>

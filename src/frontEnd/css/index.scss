@@ -23,6 +23,22 @@
   font-weight: 700;
 }
 
+@font-face {
+  font-family: 'Roboto Regular';
+  src: url('../webFonts/roboto_regular_macroman/Roboto-Regular-webfont.woff')
+    format('woff');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Roboto Black Italic';
+  src: url('../webFonts/roboto_blackitalic_macroman/Roboto-BlackItalic-webfont.woff')
+    format('woff');
+  font-style: normal;
+  font-weight: 700;
+}
+
 $main-font: Roboto, sans-serif;
 //html, body, #app, #app>div{
 // height:100%;

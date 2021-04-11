@@ -1,7 +1,7 @@
 {
   "name": "reacthookschicory",
   "version": "1.0.0",
-  "description": "",
+  "description": "Client application in whre the user selects a store using a drop down.\r <!-- <img src=\"src/backEnd/pictures/ .gif\" title=\"nate\"/> -->",
   "main": "index.js",
   "scripts": {
     "test": "jest ",
