@@ -17,7 +17,6 @@ import {SERVER, query} from '../util/constants';
 
 const DropDown = () => {
     const {state, dispatch}= useContext(StateContext);
-    console.log('state',state, 'dispatch', dispatch);
     const fetchRequest = () =>{
         const options = {   
             method: 'POST',

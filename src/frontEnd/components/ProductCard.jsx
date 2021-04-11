@@ -16,12 +16,23 @@
  
  const DropDownContainer = () => {
     const {state, dispatch}= useContext(StateContext);
-    // make a fetch request to get the information of the store
-    const {storeSelected} = state; 
+    const [currentStore, setCurrentStore] = useState({});
+    const {selectedStore} = state; 
 
+    const getSelectedStore = ()=>{
+        const {retailers} = state;
+        let foundStore = false;
+        if(retailers)foundStore = retailers.find((store)=>store.id === selectedStore);
+        setCurrentStore(foundStore)
+    }
+
+    useEffect(()=>{
+        getSelectedStore();
+    },[state]);
 
      return(<div>
-        productCard
+        
+        {currentStore && <div>{currentStore.name}</div>}
      </div>)
  }
  export default DropDownContainer;
