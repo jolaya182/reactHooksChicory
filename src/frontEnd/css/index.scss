@@ -56,9 +56,13 @@ $main-font: Roboto, sans-serif;
 //   flex-direction: column;
 //   align-items: center;
 // }
+.row{
+  margin-bottom: 10px;
+}
 
-.agendaDayPanel{
-  display: flex;
+.form-group {
+  width: 100%;
+  padding-left: 0;
 }
 
 .form-Container {
@@ -116,19 +120,19 @@ a {
     text-decoration: underline;
   }
 }
-.column {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 100%;
-}
+// .column {
+//   display: flex;
+//   flex-direction: column;
+//   flex-wrap: wrap;
+//   width: 100%;
+// }
 
-.row {
-  display: flex;
-  flex-direction: row;
-  // flex-basis: 100%;
-  flex: 1;
-}
+// .row {
+//   display: flex;
+//   flex-direction: row;
+//   // flex-basis: 100%;
+//   flex: 1;
+// }
 
 .half-Hour{
   height: 80px;
