@@ -23,13 +23,3 @@ npm run-script startwebapplication
 
 
 go to `http://localhost:8080/` url on your webbrowser
-
-
-To use jest test on the backend
-```
-npm test index.test.js 
-```
-To use puppeteer on the front end
-```
-npm run-script runserver
-npm test puppeteer.test.js
