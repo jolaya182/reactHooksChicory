@@ -1,5 +1,5 @@
 export const SERVER = `http://prod-cart.chicoryapp.com/api/graph/`;
-  
+
 export const initialState = {
   retailers: [],
   selectedRetailer: {},
@@ -7,11 +7,10 @@ export const initialState = {
   isBlackListOn: true,
   isWhiteListOn: false,
   blackList: [],
-  whiteList: [],
+  whiteList: []
 };
-const filter = "amazon";
+const filter = 'amazon';
 const search = '';
-
 
 export const query = `query retailers {
     retailers(zipCode: "11234", blacklistedRetailers: [$filter], whitelistedRetailers: []) {

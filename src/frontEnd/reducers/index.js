@@ -31,7 +31,7 @@ const addNewRetailer =(list, retailer)=>{
       case 'GET_CURRENT_STORE':
         return state.selectedRetailer;
       case 'UPDATE_CURRENT_STORE':
-        return  action.store;
+        return  action.selectedRetailer;
       default:
         return state.selectedRetailer
     }

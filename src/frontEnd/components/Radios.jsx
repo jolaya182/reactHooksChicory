@@ -8,36 +8,58 @@
  *
  * description: this component the view of the selected store
  */
-import React, { useState, useEffect, useContext } from 'react';
+import React, {  useEffect, useContext } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Form from 'react-bootstrap/Form';
 import StateContext from './StateContext';
 
-
+/**
+ *
+ * component that shows blacklist and whitelist option
+ * to focus
+ * @return {Html}
+ */
 const Radios = () => {
-    const { state, dispatch } = useContext(StateContext);
-    const {isBlackListOn, isWhiteListOn } = state;
+  const { state, dispatch } = useContext(StateContext);
+  const { isBlackListOn, isWhiteListOn } = state;
 
-    useEffect(() => {
-    }, []);
-
-    const handleRadio = (e)=>{
-        const {value} = e.target;
-        if(value === 'BlackList'){
-            dispatch({type:  "TOGGLE_BLACKLIST", isOn: true})
-            dispatch({type:  "TOGGLE_WHITELIST", isOn: false})
-
-        }else{
-            dispatch({type:  "TOGGLE_WHITELIST", isOn: true})
-            dispatch({type:  "TOGGLE_BLACKLIST", isOn: false})
-        }
-
+/**
+ * updates the state with current list to focus
+ * @param {event} e
+ */
+  const handleRadio = (e) => {
+    const { value } = e.target;
+    if (value === 'BlackList') {
+      dispatch({ type: 'TOGGLE_BLACKLIST', isOn: true });
+      dispatch({ type: 'TOGGLE_WHITELIST', isOn: false });
+    } else {
+      dispatch({ type: 'TOGGLE_WHITELIST', isOn: true });
+      dispatch({ type: 'TOGGLE_BLACKLIST', isOn: false });
     }
-    return (
-        <Form >
-        <Form.Check onChange={handleRadio} value={"BlackList"} name='list' inline label={"BlackList"} id={"BlackList"} type={"radio"} checked={isBlackListOn}/>
-        <Form.Check onChange={handleRadio} value={"WhiteList"} name='list' inline label={"WhiteList"} id={"WhiteList"} type={"radio"} checked={isWhiteListOn}/>
-        </Form>
-      )
-}
+  };
+  return (
+    <Form>
+      <Form.Check
+        onChange={handleRadio}
+        value={'BlackList'}
+        name="list"
+        inline
+        label={'BlackList'}
+        id={'BlackList'}
+        type={'radio'}
+        checked={isBlackListOn}
+      />
+      <Form.Check
+        onChange={handleRadio}
+        value={'WhiteList'}
+        name="list"
+        inline
+        label={'WhiteList'}
+        id={'WhiteList'}
+        type={'radio'}
+        checked={isWhiteListOn}
+      />
+    </Form>
+  );
+};
 export default Radios;

@@ -8,20 +8,22 @@
  *
  * description: this component the view of the selected store
  */
- import React, {useState, useEffect,  useContext} from 'react';
- import 'bootstrap/dist/css/bootstrap.css';
- import StateContext from './StateContext';
- import Row from 'react-bootstrap/Row';
- import Col from 'react-bootstrap/Col';
- const ProductCard = ({retailer}) => {
-    const {state, dispatch}= useContext(StateContext);
+import React, { useState, useEffect, useContext } from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
+import StateContext from './StateContext';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
-    useEffect(()=>{
-       
-    },[]);
-
-     return(<Row>
-       <Col>{retailer.retailerName}</Col>
-     </Row>)
- }
- export default ProductCard;
+/**
+ * displays the retailer name
+ * 
+ * @param {obj} retailer
+ */
+const ProductCard = ({ retailer }) => {
+  return (
+    <Row>
+      <Col>{retailer.retailerName}</Col>
+    </Row>
+  );
+};
+export default ProductCard;
